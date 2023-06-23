@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/sensorResults"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Sensors Results"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="4dp"
+            android:textAllCaps="false"
+            android:lines="1"
+            android:autoSizeTextType="uniform"/>
+
+        <Button
+            android:id="@+id/stopSensor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Stop Sensors"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="4dp"
+            android:textAllCaps="false"
+            android:layout_weight="1"
+            android:lines="1"
+            android:autoSizeTextType="uniform"/>
+
+<!--        <Button-->
+<!--            android:id="@+id/resetResults"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Reset"-->
+<!--            android:layout_marginEnd="8dp"-->
+<!--            android:layout_marginStart="4dp"-->
+<!--            android:textAllCaps="false"/>-->
+
+    </LinearLayout>
+
+<!--    <ScrollView-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="0dp"-->
+<!--        android:layout_marginTop="10dp"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/linearLayout"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent">-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/textView"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginHorizontal="16dp"-->
+<!--            android:textAlignment="center"/>-->
+
+
+<!--    </ScrollView>-->
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginVertical="24dp"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/linearLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="Light Sensor Value: "/>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginVertical="24dp"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/textView1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="Proximity Sensor Value: "/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
